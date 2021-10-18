@@ -1,0 +1,31 @@
+package com.xiexin.dao;
+
+import com.xiexin.bean.RenJiaoSe;
+import com.xiexin.bean.RenJiaoSeExample;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+public interface RenJiaoSeDAO {
+    long countByExample(RenJiaoSeExample example);
+
+    int deleteByExample(RenJiaoSeExample example);
+
+    int deleteByPrimaryKey(Integer renJiaoseId);
+
+    int insert(RenJiaoSe record);
+
+    int insertSelective(RenJiaoSe record);
+
+    List<RenJiaoSe> selectByExample(RenJiaoSeExample example);
+
+    RenJiaoSe selectByPrimaryKey(Integer renJiaoseId);
+
+    int updateByExampleSelective(@Param("record") RenJiaoSe record, @Param("example") RenJiaoSeExample example);
+
+    int updateByExample(@Param("record") RenJiaoSe record, @Param("example") RenJiaoSeExample example);
+
+    int updateByPrimaryKeySelective(RenJiaoSe record);
+
+    int updateByPrimaryKey(RenJiaoSe record);
+}
